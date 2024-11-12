@@ -1,9 +1,10 @@
 
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Save from "./Save";
-import List from "./List";
-import Header from "./Header";
+import Save from "./pages/Save";
+import List from "./pages/List";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/save" element={<Save />} />
           <Route path="/List" element={<List />} />
         </Routes>
